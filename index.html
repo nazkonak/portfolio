@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="tr" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Nisa Naz Konak | Kişisel Portfolyo & Mühendislik Staj Raporları</title>
+  <meta name="description" content="Karabük Üniversitesi Bilgisayar Mühendisliği Öğrencisi Nisa Naz Konak'ın Kişisel Portfolyosu, Yıldız Tech (2025) Anomali Tespiti ve Global Bilgi (2026) Yapay Zekâ Staj Çalışmaları.">
+  
+  <!-- Mobile App / PWA Meta Tags -->
+  <meta name="theme-color" content="#020617">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Nisa Konak">
+
+  <!-- Favicon / Page Icon (Base64 Data URI) -->
+  <link rel="icon" type="image/png" href="nk_logo.png">
+  <link rel="shortcut icon" type="image/png" href="nk_logo.png">
+  <link rel="apple-touch-icon" href="nk_logo.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Embedded Custom CSS -->
+  <style>
+/* Nisa Naz Konak Portfolio Custom Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+code, pre, .font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.4);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.8);
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.glass-card {
+  background: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(99, 102, 241, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px -10px rgba(99, 102, 241, 0.25);
+}
+
+/* Gradient Background Mesh */
+.bg-mesh-dark {
+  background-color: #0b0f19;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(168, 85, 247, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.12) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(236, 72, 153, 0.12) 0px, transparent 50%);
+}
+
+.bg-mesh-light {
+  background-color: #f8fafc;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.08) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(168, 85, 247, 0.08) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.06) 0px, transparent 50%);
+}
+
+/* Glow Effects */
+.glow-primary {
+  box-shadow: 0 0 25px rgba(99, 102, 241, 0.4);
+}
+
+.glow-text {
+  text-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
+}
+
+/* Animated Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Typing cursor animation */
+.typing-cursor::after {
+  content: '|';
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Pulse Node Animation for Topology Graph */
+.pulse-node {
+  animation: pulseNode 2s infinite;
+}
+
+@keyframes pulseNode {
+  0% {
+    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(99, 102, 241, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
+  }
+}
+
+/* Wave Animation for Audio STT */
+.sound-wave-bar {
+  animation: soundWave 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes soundWave {
+  0% { height: 6px; }
+  100% { height: 28px; }
+}
+
+/* Staj Defteri Sheet Look */
+.defter-sheet {
+  background: #ffffff;
+  color: #1e293b;
+  border: 3px double #334155;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.defter-sheet-dark {
+  background: #0f172a;
+  color: #f1f5f9;
+  border: 2px solid #334155;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen selection:bg-indigo-500 selection:text-white bg-mesh-dark antialiased">
+
+  <!-- ==================== HEADER & NAVBAR ==================== -->
+  <header class="fixed top-0 left-0 right-0 z-40 glass-panel border-b border-slate-800/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <img src="nk_logo.png" alt="NK Logo" class="w-10 h-10 rounded-full shadow-lg shadow-indigo-600/30 group-hover:scale-105 transition-transform object-cover border border-indigo-500/40">
+        <div class="flex flex-col">
+          <span class="font-bold text-sm tracking-tight text-slate-100">Nisa Naz KONAK</span>
+          <span class="text-[10px] text-indigo-400 font-mono">Bilgisayar Mühendisliği</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-6 text-xs font-medium text-slate-300">
+        <a href="#hakkimda" class="hover:text-indigo-400 transition-colors">Hakkımda</a>
+        <a href="#yetenekler" class="hover:text-indigo-400 transition-colors">Yetenekler</a>
+        <a href="#semalar" class="hover:text-indigo-400 transition-colors flex items-center gap-1">
+          <span>Mimari Şemalar</span>
+          <span class="px-1.5 py-0.5 text-[9px] bg-indigo-500/20 text-indigo-300 rounded-full border border-indigo-500/30">İş Akışları</span>
+        </a>
+        <a href="#stajlar" class="hover:text-indigo-400 transition-colors flex items-center gap-1">
+          <span>Staj Raporları</span>
+          <span class="px-1.5 py-0.5 text-[9px] bg-purple-500/20 text-purple-300 rounded-full border border-purple-500/30">2025 & 2026</span>
+        </a>
+        <a href="#projeler" class="hover:text-indigo-400 transition-colors">GitHub Depoları</a>
+      </nav>
+
+      <!-- Right Actions -->
+      <div class="flex items-center gap-3">
+        <!-- GitHub Profile -->
+        <a href="https://github.com/nazkonak" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold shadow-lg shadow-indigo-600/20 transition-all">
+          <i data-lucide="github" class="w-4 h-4"></i>
+          <span>GitHub Profilim</span>
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-400 hover:text-slate-100 focus:outline-none" aria-label="Menüyü Aç">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 bg-slate-900/95 border-b border-slate-800 space-y-2 text-sm backdrop-blur-md">
+      <a href="#hakkimda" class="block py-2.5 px-3 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-indigo-400">Hakkımda</a>
+      <a href="#yetenekler" class="block py-2.5 px-3 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-indigo-400">Teknolojik Yetenekler</a>
+      <a href="#semalar" class="block py-2.5 px-3 rounded-lg text-indigo-400 font-bold hover:bg-slate-800">Mimari Şemalar & Akışlar</a>
+      <a href="#stajlar" class="block py-2.5 px-3 rounded-lg text-purple-400 font-bold hover:bg-slate-800">Staj 1 (2025) & Staj 2 (2026)</a>
+      <a href="#projeler" class="block py-2.5 px-3 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-indigo-400">GitHub Depoları</a>
+      <a href="https://github.com/nazkonak" target="_blank" class="block py-2.5 px-3 rounded-lg bg-indigo-600 text-white text-center font-bold">GitHub Profilim</a>
+    </div>
+  </header>
+
+  <main class="pt-24 pb-20 space-y-20 sm:space-y-24">
+
+    <!-- ==================== HERO SECTION (HAKKIMDA) ==================== -->
+    <section id="hero" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 sm:pt-8">
+      <div id="hakkimda" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        
+        <!-- Hero Text -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-xs font-semibold">
+            <span class="w-2 h-2 rounded-full bg-indigo-400 animate-ping"></span>
+            <span>Karabük Üniversitesi Bilgisayar Mühendisliği</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-100">
+            Merhaba, ben <br class="hidden sm:block"/>
+            <span class="gradient-text glow-text">Nisa Naz Konak</span>
+          </h1>
+
+          <div class="min-h-[2rem] text-base sm:text-xl font-mono text-slate-300 font-semibold">
+            <span id="typing-text" class="typing-cursor text-indigo-400"></span>
+          </div>
+
+          <p class="text-xs sm:text-base text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            Karabük Üniversitesi Bilgisayar Mühendisliği 3. sınıf öğrencisiyim. Yıldız Tech'te Anomali Tespiti (Isolation Forest, MAD, 3-Sigma) ve Veri Bilimi; Global Bilgi'de Yapay Zekâ Ajanları, Speech-to-Text Veri Analizi ve React Envanter Görselleştirme üzerine çalıştım.
+          </p>
+
+          <!-- Buttons -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-2">
+            <a href="#yetenekler" class="px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm shadow-xl shadow-emerald-600/30 transition-all flex items-center gap-2">
+              <i data-lucide="cpu" class="w-4 h-4"></i>
+              <span>Yeteneklerimi Gör</span>
+            </a>
+            <a href="#semalar" class="px-5 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-xs sm:text-sm shadow-xl shadow-indigo-600/30 transition-all flex items-center gap-2">
+              <i data-lucide="git-fork" class="w-4 h-4"></i>
+              <span>Mimari Şemalar</span>
+            </a>
+            <a href="#stajlar" class="px-5 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-xs sm:text-sm shadow-xl shadow-purple-600/30 transition-all flex items-center gap-2">
+              <i data-lucide="building" class="w-4 h-4"></i>
+              <span>Staj Raporları</span>
+            </a>
+          </div>
+
+          <!-- Key Stats Cards -->
+          <div id="hero-stats" class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4 sm:pt-6">
+            <!-- Dynamically populated by app.js -->
+          </div>
+        </div>
+
+        <!-- Hero Profile Card / Badge -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-md p-6 sm:p-8 rounded-3xl glass-panel border border-slate-700/80 shadow-2xl overflow-hidden group">
+            
+            <div class="absolute -right-10 -top-10 w-40 h-40 bg-indigo-600/20 rounded-full blur-3xl group-hover:bg-indigo-600/30 transition-all"></div>
+
+            <div class="flex items-center gap-4 mb-6">
+              <img src="nk_logo.png" alt="NK Logo" class="w-14 h-14 sm:w-16 sm:h-16 rounded-full shadow-2xl border-2 border-indigo-500/40 object-cover bg-slate-900/80 p-0.5 shrink-0">
+              <div>
+                <h3 class="text-lg sm:text-xl font-bold text-slate-100">Nisa Naz KONAK</h3>
+                <p class="text-xs text-slate-400">Karabük Üniv. Mühendislik Fak.</p>
+              </div>
+            </div>
+
+            <div class="space-y-3 text-xs text-slate-300">
+              <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800 flex items-center justify-between">
+                <span class="text-slate-400">Staj 1 (2025):</span>
+                <span class="font-bold text-amber-300">Yıldız Tech (Anomali Tespiti)</span>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800 flex items-center justify-between">
+                <span class="text-slate-400">Staj 2 (2026):</span>
+                <span class="font-bold text-indigo-300">Global Bilgi (Yapay Zekâ)</span>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800 flex items-center justify-between">
+                <span class="text-slate-400">GitHub Adresi:</span>
+                <a href="https://github.com/nazkonak" target="_blank" class="font-mono font-bold text-indigo-400 hover:underline">github.com/nazkonak</a>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
+              <span class="text-xs text-emerald-400 flex items-center gap-1.5 font-semibold">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                2 Staj Raporı Aktif
+              </span>
+              <a href="#stajlar" class="text-xs text-indigo-400 hover:underline font-semibold">Raporları Gör →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== TECHNICAL SKILLS ==================== -->
+    <section id="yetenekler" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold">
+          <i data-lucide="cpu" class="w-3.5 h-3.5"></i>
+          <span>Yetkinlikler</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-100">
+          Teknolojik Yetenekler & Uzmanlıklar
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+          Programlama dilleri, yapay zekâ, veri mühendisliği, anomali tespiti ve web teknolojilerindeki yetkinlik seviyeleri:
+        </p>
+      </div>
+
+      <div id="skills-container" class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+        <!-- Loaded via app.js -->
+      </div>
+
+    </section>
+
+    <!-- ==================== ARCHITECTURE & WORKFLOW SCHEMAS SECTION ==================== -->
+    <section id="semalar" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-xs font-semibold">
+          <i data-lucide="git-graph" class="w-3.5 h-3.5"></i>
+          <span>Mimari & İş Akış Haritaları</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-100">
+          Proje ve Sistem Mimari Şemaları
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+          Geliştirilen GitHub projelerinin, Yıldız Tech Anomali Tespiti ve Global Bilgi Yapay Zekâ / Envanter çalışmalarının katmanlı sistem mimarileri:
+        </p>
+      </div>
+
+      <!-- SCHEMAS CONTAINER -->
+      <div id="project-schemas-container" class="space-y-8 sm:space-y-12">
+        <!-- Dynamically rendered by app.js -->
+      </div>
+
+    </section>
+
+    <!-- ==================== STAJLAR (2025 YILDIZ TECH & 2026 GLOBAL BİLGİ) ==================== -->
+    <section id="stajlar" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 text-xs font-semibold">
+          <i data-lucide="building-2" class="w-3.5 h-3.5"></i>
+          <span>Mühendislik Staj Raporları</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-100">
+          Zorunlu Staj Çalışmaları & Günlükleri
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+          2025 Yıldız Tech (Veri Bilimi & Anomali Tespiti) ve 2026 Global Bilgi (Yapay Zekâ & Envanter) staj defterlerinin haftalık iş dökümü:
+        </p>
+      </div>
+
+      <!-- Internship Selector Tabs -->
+      <div id="internship-tabs" class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-8">
+        <!-- Loaded via app.js -->
+      </div>
+
+      <!-- Internship Meta Header -->
+      <div id="internship-meta-header" class="max-w-4xl mx-auto">
+        <!-- Loaded via app.js -->
+      </div>
+
+      <!-- Weekly Timeline -->
+      <div class="max-w-4xl mx-auto">
+        <div id="internship-timeline">
+          <!-- Dynamically populated by app.js -->
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ==================== GITHUB REPOSITORIES GRID ==================== -->
+    <section id="projeler" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-semibold">
+          <i data-lucide="code" class="w-3.5 h-3.5"></i>
+          <span>Tüm Projeler</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-100">
+          GitHub Depoları & Kaynak Kodlar
+        </h2>
+      </div>
+
+      <!-- Controls: Category Filters & Search Bar -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
+        <div id="project-category-filters" class="flex flex-wrap items-center justify-center sm:justify-start gap-2 w-full sm:w-auto">
+          <!-- Loaded via app.js -->
+        </div>
+
+        <div class="relative w-full sm:w-64">
+          <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3 top-3"></i>
+          <input type="text" id="project-search" placeholder="Proje ara (örn: Python, C)..." class="w-full pl-9 pr-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-xs text-slate-200 focus:outline-none focus:border-indigo-500">
+        </div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Loaded via app.js -->
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="border-t border-slate-800/80 py-8 bg-slate-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+      <div class="flex items-center gap-3 text-center sm:text-left">
+        <img src="nk_logo.png" alt="NK Logo" class="w-6 h-6 rounded-full object-cover shrink-0">
+        <span>© 2026 Nisa Naz KONAK. Tüm Hakları Saklıdır. Karabük Üniversitesi Bilgisayar Mühendisliği.</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://github.com/nazkonak" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 transition-colors">GitHub</a>
+        <span>•</span>
+        <a href="#hero" class="hover:text-indigo-400 transition-colors">Yukarı Dön ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Embedded JS Data -->
+  <script>
+// Nisa Naz Konak Portfolio Master Data
+const PORTFOLIO_DATA = {
+  personalInfo: {
+    name: "Nisa Naz KONAK",
+    title: "Bilgisayar Mühendisliği Öğrencisi & Yapay Zekâ / Veri Analisti / Web Geliştirici",
+    university: "Karabük Üniversitesi",
+    faculty: "Bilgisayar ve Bilişim Bilimleri Fakültesi",
+    department: "Bilgisayar Mühendisliği (%30 İngilizce)",
+    grade: "3. Sınıf Öğrencisi",
+    githubUrl: "https://github.com/nazkonak",
+    email: "nisanazkonak@gmail.com",
+    location: "Karabük / İstanbul, Türkiye",
+    bio: "Karabük Üniversitesi Bilgisayar Mühendisliği 3. sınıf öğrencisiyim. Yıldız Tech'te Anomali Tespiti (Isolation Forest, MAD, 3-Sigma), EDA ve Makine Öğrenmesi; Global Bilgi'de Yapay Zekâ Ajanları (AI Agents), STT Veri Analizi ve React Envanter Görselleştirme üzerine çalıştım.",
+    interests: [
+      "Yapay Zekâ & Anomali Tespiti (Isolation Forest, MAD)",
+      "EDA (Keşifsel Veri Analizi) & Time Series Data",
+      "Görüntü İşleme & Makine Öğrenmesi (MNIST)",
+      "Veri Haberleşmesi & Hata Düzeltme Algoritmaları (PARITY, CRC, HAMMING)",
+      "C ile Veri Yapıları & React Web Geliştirme"
+    ],
+    stats: {
+      githubRepos: "7",
+      pythonProjects: "4",
+      cProjects: "2",
+      internships: "2 (2025 & 2026)"
+    }
+  },
+
+  internships: [
+    {
+      id: "staj1",
+      company: "Yıldız Tech (Yıldız Holding)",
+      year: "2025",
+      period: "01 Temmuz 2025 – 29 Temmuz 2025",
+      type: "Staj 1 (Zorunlu Mühendislik Stajı)",
+      field: "Veri Bilimi, Makine Öğrenmesi, Anomali Tespiti & Endüstri 4.0",
+      vision: "Yıldız Holding dışındaki firmalara ticari ürünler sunmak ve global pazarlara hitap eden açık inovasyon odaklı bir teknoloji firması olmak.",
+      mission: "Yeni nesil teknolojilerden yararlanarak e-ticaret ve kurumsal müşterilere dijital ve analitik çözümlerle sürdürülebilir değer sağlamak.",
+      weeklyLogs: [
+        {
+          week: "1. Hafta (01/07 - 04/07/2025)",
+          title: "Oryantasyon, Fabrika Gezisi & Veri Bilimi Eğitimi",
+          summary: "Şirket oryantasyonu ve Topkapı Çikolata Fabrikası teknik gezisi gerçekleştirildi. Anomali takip sistemi süreçleri ve Veri Bilimi eğitimine başlandı.",
+          details: [
+            "Topkapı Çikolata Fabrikası gezisinde üretim makinelerinin mühendislik işleyişi incelendi.",
+            "İnsan Kaynakları ve Bilgi Güvenliği Departmanı seminerlerine katılım sağlandı.",
+            "Anomali takip sisteminin takvimsel ilerleyişi ve veri bilimi proje yönetimi adımları öğrenildi."
+          ],
+          badge: "Orientation & Data Science Intro"
+        },
+        {
+          week: "2. Hafta (07/07 - 11/07/2025)",
+          title: "Pandas & Matplotlib ile EDA (Keşifsel Veri Analizi)",
+          summary: "Python Pandas, Matplotlib kütüphaneleri öğrenildi. Veri setlerinde filtreleme, groupby, scatter plot çizimleri ve veri temizleme çalışmaları yapıldı.",
+          details: [
+            "Matplotlib ile çizgi ve scatter grafikleri çizildi, Pandas DataFrame veri filtrelemeleri gerçekleştirildi.",
+            "Denetim departmanı sunumu ve İK Mülakat Simülasyonu eğitimine katılım sağlandı.",
+            "Sensör veri setlerinde tarih ve tag bazlı gruplama (`groupby`) metotları uygulandı.",
+            "LLM, RAG akışı, API ve LSTM terimleri üzerine araştırmalar yapıldı."
+          ],
+          badge: "EDA & Data Cleaning"
+        },
+        {
+          week: "3. Hafta (14/07 - 18/07/2025)",
+          title: "Sensör Verileri Görselleştirme & MAD Anomali Tespiti",
+          summary: "Sensör sıcaklık verileri gün bazında filtrelenerek görselleştirildi. MAD (Median Absolute Deviation) algoritması ile anomali tespiti denendi.",
+          details: [
+            "Sensörlerin bir yıl içerisindeki sıcaklık davranışları grafiklerle gözlemlendi ve hedeften sapmalar tespit edildi.",
+            "Mali İşler ve AR-GE departman tanıtım toplantılarına katılım sağlandı.",
+            "Güncel kod üzerinde MAD (Median Absolute Deviation) anomali tespit algoritması uygulanarak verimliliği analiz edildi."
+          ],
+          badge: "MAD Anomaly Algorithm"
+        },
+        {
+          week: "4. Hafta (21/07 - 25/07/2025)",
+          title: "Isolation Forest, 3-Sigma Threshold & DBSCAN Algoritmaları",
+          summary: "Isolation Forest, DBSCAN kümeleme, Random Forest ve 3-Sigma Threshold yöntemleriyle endüstriyel sensör verilerinde anomali tespiti yapıldı.",
+          details: [
+            "Satış, Advanced Analytics ve Sürdürülebilirlik departman sunumlarına katılım sağlandı.",
+            "3-Sigma Threshold kuralı (`mean_val ± 3 * std_val`) ile üst/alt limit eşikleri belirlenerek anomaliler işaretlendi.",
+            "Isolation Forest modeli eğitildi (`n_estimators=200`, `contamination=auto`) ve matplotlib ile anomali noktaları kırmızı ile görselleştirildi.",
+            "One-Hot Encoding (`pd.get_dummies`) ile malzeme türleri modele dahil edildi."
+          ],
+          badge: "Isolation Forest & 3-Sigma"
+        },
+        {
+          week: "5. Hafta (28/07 - 29/07/2025)",
+          title: "Anomali Tespiti Sunumu ve Kapanış",
+          summary: "Endüstriyel sensör ve malzeme bazlı anomali tespit projesinin son hali yöneticiye sunuldu. Staj başarıyla tamamlandı.",
+          details: [
+            "Sensör türleri, hat hızı ve hedeflenen/ölçülen değerler arasındaki çelişkiler grafiklerle gösterildi.",
+            "Yöneticiye proje sunumu yapıldı ve geri bildirimler alındı.",
+            "Staj 1 başarıyla noktalandı."
+          ],
+          badge: "Final Presentation"
+        }
+      ]
+    },
+    {
+      id: "staj2",
+      company: "Global Bilgi",
+      year: "2026",
+      period: "29 Haziran 2026 – 27 Temmuz 2026",
+      type: "Staj 2 (Zorunlu Mühendislik Stajı)",
+      field: "Telekomünikasyon, Müşteri Deneyimi & Yapay Zekâ Teknolojileri",
+      weeklyLogs: [
+        {
+          week: "1. Hafta (29/06 - 03/07/2026)",
+          title: "Oryantasyon, Yapay Zekâ Ajan Platformu ve Prompt Analizi",
+          summary: "Şirkete giriş yapıldı ve oryantasyon tamamlandı. Yapay zekâ ajanları tasarlama uygulaması incelendi. Prompt yazma mantığı ve test planı oluşturuldu.",
+          details: [
+            "Oryantasyon ve geliştirme bilgisayarı kurulumu tamamlandı.",
+            "Yapay zekâ ajan klonlama ve simülasyon testleri gerçekleştirildi.",
+            "Speech-To-Text (STT) konuşmalarında kelime doğruluk oranları hesaplandı."
+          ],
+          badge: "AI Agent Fundamentals"
+        },
+        {
+          week: "2. Hafta (06/07 - 10/07/2026)",
+          title: "Prompt Optimizasyonu, RAG Doğrulaması & STT Veri Etiketleme",
+          summary: "Prompt yaklaşımları yeniden düzenlendi. RAG ve API dosyaları ile paralel yanıt doğrulaması yapıldı. STT excel verileri etiketlendi.",
+          details: [
+            "Ses kayıtları dinlenerek algılanan cümleler ile asıl söylemler etiketlendi.",
+            "Ajan yanıtları RAG ve API dosyaları ile paralel şekilde doğrulandı ve eksiklikler raporlandı.",
+            "Envanter uygulaması ön hazırlık ve gereksinim analizi tamamlandı."
+          ],
+          badge: "RAG & STT Data Labeling"
+        },
+        {
+          week: "3. Hafta (13/07 - 17/07/2026)",
+          title: "Envanter Uygulaması Frontend Geliştirme & 3.000 Ses Kaydı Analizi",
+          summary: "Çoklu Kullanıcılı STT Veri Temizleme Aracı ile 3.000+ ses kaydı etiketlendi. Envanter uygulamasının React tabanlı arayüzü geliştirildi.",
+          details: [
+            "Gürültülü ses verileri tespit edilerek temizleme etiketi atıldı.",
+            "Sunucu ve servis mimarisi incelenerek TEST/PRE-PROD/CANLI ortam ayrıştırmaları yapıldı.",
+            "Form ekranlarında IP ve Hostname çakışma uyarıları geliştirildi."
+          ],
+          badge: "Frontend & Large Data Cleaning"
+        },
+        {
+          week: "4. Hafta (20/07 - 24/07/2026)",
+          title: "Sunucu İlişkileri, Ağ Topolojisi Grafiği & Benchmark Veri Seti",
+          summary: "Ağ Topolojisi (Topology Graph) modülü geliştirildi. Benchmark performans testleri için 20+ ses kaydı metni sadeleştirildi.",
+          details: [
+            "Yeni stajyerlere platform kurulumları ve yapay zeka ajanı mantığı anlatıldı.",
+            "Topoloji grafik çizimi üzerinde sunucu ilişkileri görselleştirildi.",
+            "Benchmark diyalog metinleri noktalama ve özel isim açısından sadeleştirildi."
+          ],
+          badge: "Topology & Benchmark NLP"
+        },
+        {
+          week: "5. Hafta (27/07/2026)",
+          title: "Proje Sunumu, Kapanış ve Çıkış İşlemleri",
+          summary: "Envanter uygulamasının son hali yöneticiye sunuldu. İnsan kaynakları çıkış işlemleri tamamlandı.",
+          details: [
+            "Geliştirilen envanter ve topoloji uygulamasının demosu sunuldu.",
+            "Staj başarıyla tamamlandı."
+          ],
+          badge: "Final Presentation"
+        }
+      ]
+    }
+  ],
+
+  projectSchemas: [
+    {
+      id: "datacomm",
+      title: "DataCommunication — 5 Seçimli Hata Düzeltme & Kontrol Mimarisi",
+      category: "Sistem & Ağ Haberleşmesi",
+      githubUrl: "https://github.com/nazkonak/DataCommunication",
+      description: "İki istemci arasındaki TCP/IP socket haberleşmesinde kullanıcının 5 farklı hata kontrol ve düzeltme algoritmasından (PARITY, 2DPARITY, CRC-16, HAMMING, CHECKSUM) birini seçimli olarak tercih edebildiği esnek haberleşme mimarisi.",
+      steps: [
+        { label: "İstemci 1 (Gönderici)", sub: "Metin & Seçilen Metod (method) Belirlenir", color: "bg-blue-600/20 text-blue-300 border-blue-500/40", icon: "send" },
+        { label: "Veri Bozma Sunucusu", sub: "Socket Aktarımı Sırasında Bit Bozma (örn: Bit Flip)", color: "bg-rose-600/20 text-rose-300 border-rose-500/40", icon: "zap" },
+        { label: "5 Seçimli Kontrol Yapısı", sub: "PARITY • 2DPARITY • CRC • HAMMING • CHECKSUM", color: "bg-emerald-600/20 text-emerald-300 border-emerald-500/40", icon: "shield-check" },
+        { label: "computed_control & Onarım", sub: "Hesaplanan Kontrol Biti ile Kayıpsız Veri Teslimatı", color: "bg-indigo-600/20 text-indigo-300 border-indigo-500/40", icon: "check-circle" }
+      ],
+      details: [
+        "5 Seçimli Algoritma: PARITY, 2DPARITY, CRC-16, HAMMING ve CHECKSUM.",
+        "Seçimli Algoritma Yapısı: Gönderilen veride tercih edilen metoda göre dinamik kontrol hesabı (`computed_control`).",
+        "Socket Programlama ile TCP/IP haberleşmesinde %100 veri bütünlüğü doğrulaması."
+      ]
+    },
+    {
+      id: "staj1_yildiztech",
+      title: "Yıldız Tech — Endüstriyel Sensör Anomali Tespiti Boru Hattı (Isolation Forest & MAD)",
+      category: "Staj 1 (2025) — Veri Bilimi & Anomali Tespiti",
+      githubUrl: "#staj2025",
+      description: "Fabrika üretim bandındaki sensör sıcaklık ve hat hızı verilerinin Pandas/EDA ile temizlenmesi, 3-Sigma ve Isolation Forest modelleriyle anomali tespiti ve Matplotlib ile görselleştirilmesi.",
+      steps: [
+        { label: "Veri Ön İşleme & Encoding", sub: "One-Hot Encoding (pd.get_dummies) & fillna(0)", color: "bg-amber-600/20 text-amber-300 border-amber-500/40", icon: "filter" },
+        { label: "3-Sigma Threshold Sınırlama", sub: "mean ± 3 * std kuralı ile uç değer tespiti", color: "bg-blue-600/20 text-blue-300 border-blue-500/40", icon: "bar-chart-2" },
+        { label: "Isolation Forest Model Eğitimi", sub: "n_estimators=200, contamination=auto", color: "bg-purple-600/20 text-purple-300 border-purple-500/40", icon: "cpu" },
+        { label: "Anomali Görselleştirme", sub: "Matplotlib Scatter Plot üzerinde Kırmızı Noktalar", color: "bg-emerald-600/20 text-emerald-300 border-emerald-500/40", icon: "pie-chart" }
+      ],
+      details: [
+        "MAD (Median Absolute Deviation) ve DBSCAN kümeleme yöntemleri karşılaştırması.",
+        "Sensör id, tarih, hat hızı ve hedeflenen/ölçülen değer çelişki analizi.",
+        "Malzeme türü bazında anomali dağılımı görselleştirmesi."
+      ]
+    },
+    {
+      id: "mnist",
+      title: "MNIST — Görüntü İşleme & Rakam Sınıflandırma Boru Hattı",
+      category: "Yapay Zekâ & Görüntü İşleme",
+      githubUrl: "https://github.com/nazkonak/MNIST",
+      description: "El yazısı rakam görüntülerinin matrise dönüştürülüp ön işlemeden geçirilmesi ve Makine Öğrenmesi modeli ile tanınması aşamaları.",
+      steps: [
+        { label: "Ham Görüntü Girdisi", sub: "28x28 Gri Seviye Piksel Matrisi", color: "bg-purple-600/20 text-purple-300 border-purple-500/40", icon: "image" },
+        { label: "Ön İşleme & Normalizasyon", sub: "Piksel Değerleri [0, 255] -> [0, 1] Ölçekleme", color: "bg-blue-600/20 text-blue-300 border-blue-500/40", icon: "sliders" },
+        { label: "Özellik Çıkarımı", sub: "Kenar & Desen Çizgileri Matris Çıkarımı", color: "bg-indigo-600/20 text-indigo-300 border-indigo-500/40", icon: "cpu" },
+        { label: "Sınıflandırıcı & Tahmin", sub: "%98.4 Doğrulukla Rakam Sınıfı (0-9)", color: "bg-emerald-600/20 text-emerald-300 border-emerald-500/40", icon: "award" }
+      ],
+      details: [
+        "Python, OpenCV ve NumPy kütüphaneleri ile görüntü ön işleme.",
+        "Scikit-Learn / Neural Network ile 10 farklı sınıf (0-9) tahmini.",
+        "Confusion Matrix ve F1-Score başarım analizleri."
+      ]
+    },
+    {
+      id: "datastruct",
+      title: "dataStructureProject — C Veri Yapıları & Bellek Mimarisi",
+      category: "C Dili & Algoritmalar",
+      githubUrl: "https://github.com/nazkonak/dataStructureProject",
+      description: "C dilinde dinamik bellek (malloc/free) yönetimi, Bağlı Liste (LinkedList) ve İkili Arama Ağacı (BST) kullanarak veri sıralama ve arama yapısı.",
+      steps: [
+        { label: "Dinamik Bellek Tahsisi", sub: "struct Node *head (malloc)", color: "bg-emerald-600/20 text-emerald-300 border-emerald-500/40", icon: "hard-drive" },
+        { label: "Düğüm İletimi", sub: "curr = curr->next (Adres Takibi)", color: "bg-amber-600/20 text-amber-300 border-amber-500/40", icon: "git-commit" },
+        { label: "Sıralama Algoritması", sub: "QuickSort O(n log n) / BubbleSort O(n²)", color: "bg-indigo-600/20 text-indigo-300 border-indigo-500/40", icon: "bar-chart-3" },
+        { label: "İkili Arama Ağacı (BST)", sub: "Sol/Sağ Çocuk Düğümler ile O(log n) Arama", color: "bg-purple-600/20 text-purple-300 border-purple-500/40", icon: "network" }
+      ],
+      details: [
+        "C dili Pointers ve struct bellek adresleme mantığı.",
+        "Öğrenci numarası ve GPA'ya göre hızlı sıralama (QuickSort).",
+        "Bellek sızıntısını (Memory Leak) önleyen free() temizlik döngüsü."
+      ]
+    },
+    {
+      id: "staj_topology",
+      title: "Global Bilgi — Envanter & Sunucu Topolojisi Mimarisi",
+      category: "Staj 2 (2026) — Frontend & Sistem",
+      githubUrl: "#staj2026",
+      description: "Telekomünikasyon altyapısındaki sunucular (App, DB, Santral, Speech) ve servisler arasındaki ilişkileri gösteren ağ topolojisi görselleştirmesi.",
+      steps: [
+        { label: "Servis Katmanı", sub: "Tellia, Deneme, CBM Uygulama Servisleri", color: "bg-cyan-600/20 text-cyan-300 border-cyan-500/40", icon: "layers" },
+        { label: "Sunucu Kategorizasyonu", sub: "App Server, Veritabanı, Santral, Speech STT", color: "bg-blue-600/20 text-blue-300 border-blue-500/40", icon: "server" },
+        { label: "Ortam Ayrıştırması", sub: "TEST | PRE-PROD | CANLI Ortam İzolasyonu", color: "bg-purple-600/20 text-purple-300 border-purple-500/40", icon: "shield" },
+        { label: "İnteraktif Topoloji Grafiği", sub: "Sunucular Arası Ağ ve Bağlantı Çizimi", color: "bg-emerald-600/20 text-emerald-300 border-emerald-500/40", icon: "share-2" }
+      ],
+      details: [
+        "React tabanlı modern frontend envanter arayüzü.",
+        "IP ve Hostname çakışma engelleyici form doğrulama mantığı.",
+        "Load Balancer ve yedekli sunucu mimarisi tasarımları."
+      ]
+    }
+  ],
+
+  projects: [
+    {
+      id: "datacommunication",
+      title: "DataCommunication",
+      language: "Python",
+      langBadge: "bg-blue-600/20 text-blue-400 border-blue-500/30",
+      description: "İki istemcinin socket üzerinden haberleştiği; alıcının 5 farklı seçimli kontrol metodu (PARITY, 2DPARITY, CRC-16, HAMMING, CHECKSUM) arasından tercih yaparak bozulan veriyi doğrulayıp onardığı sistem.",
+      githubUrl: "https://github.com/nazkonak/DataCommunication",
+      stars: 0,
+      forks: 0,
+      category: "Sistem & Algoritma",
+      highlights: ["PARITY & 2DPARITY", "CRC-16 & CHECKSUM", "HAMMING Code", "Socket Programming"]
+    },
+    {
+      id: "datastructureproject",
+      title: "dataStructureProject",
+      language: "C",
+      langBadge: "bg-emerald-600/20 text-emerald-400 border-emerald-500/30",
+      description: "Veri Yapıları algoritmaları (Bağlı Liste / LinkedList, İkili Arama Ağacı / BST, Sıralama ve Arama algoritmaları) kullanılarak C dilinde geliştirilmiş kapsamlı Öğrenci Yönetim Sistemi.",
+      githubUrl: "https://github.com/nazkonak/dataStructureProject",
+      stars: 0,
+      forks: 0,
+      category: "Sistem & Algoritma",
+      highlights: ["C Language", "Data Structures", "Pointers & Memory", "Algorithms"]
+    },
+    {
+      id: "mnist",
+      title: "MNIST Handwritten Digit Recognition",
+      language: "Python",
+      langBadge: "bg-purple-600/20 text-purple-400 border-purple-500/30",
+      description: "Python, Görüntü İşleme (Image Processing) ve Makine Öğrenmesi (Machine Learning) algoritmaları kullanılarak el yazısı rakamların %98+ doğrulukla tanınmasını sağlayan veri işleme ve sınıflandırma projesi.",
+      githubUrl: "https://github.com/nazkonak/MNIST",
+      stars: 0,
+      forks: 0,
+      category: "Yapay Zekâ & Veri",
+      highlights: ["Python", "Computer Vision", "Pattern Recognition", "MNIST Dataset"]
+    },
+    {
+      id: "zooreservation",
+      title: "Zoo Reservation Web Platform",
+      language: "JavaScript / HTML",
+      langBadge: "bg-amber-600/20 text-amber-400 border-amber-500/30",
+      description: "Hayvanat bahçesi ziyaretçilerinin özel tur planlamaları yapabileceği, bilet türlerini inceleyebileceği ve kayıt oluşturabileceği etkileşimli web platformu.",
+      githubUrl: "https://github.com/nazkonak/ZooReservationWebsite",
+      stars: 0,
+      forks: 0,
+      category: "Web & Arayüz",
+      highlights: ["HTML5", "CSS3", "JavaScript", "User Experience"]
+    },
+    {
+      id: "todoapp",
+      title: "ToDoApp Management System",
+      language: "C#",
+      langBadge: "bg-indigo-600/20 text-indigo-400 border-indigo-500/30",
+      description: "C# ile nesne yönelimli programlama (OOP) prensiplerine uygun olarak geliştirilmiş masaüstü/konsol görev takip ve zaman yönetimi uygulaması.",
+      githubUrl: "https://github.com/nazkonak/ToDoApp",
+      stars: 0,
+      forks: 0,
+      category: "Sistem & Algoritma",
+      highlights: ["C#", ".NET", "OOP", "Task Scheduling"]
+    },
+    {
+      id: "nazkonak_github_io",
+      title: "nazkonak.github.io (Web Programming)",
+      language: "HTML / CSS / JS",
+      langBadge: "bg-cyan-600/20 text-cyan-400 border-cyan-500/30",
+      description: "İnternet Tabanlı Programlama dersi kapsamında geliştirilmiş kişisel ve akademik web projeleri koleksiyonu.",
+      githubUrl: "https://github.com/nazkonak/nazkonak.github.io",
+      stars: 0,
+      forks: 0,
+      category: "Web & Arayüz",
+      highlights: ["Web Development", "GitHub Pages", "Responsive Design"]
+    }
+  ],
+
+  skills: {
+    languages: [
+      { name: "Python", level: 90 },
+      { name: "C / C++", level: 85 },
+      { name: "JavaScript / TypeScript", level: 85 },
+      { name: "C#", level: 75 },
+      { name: "Java", level: 70 },
+      { name: "SQL (PostgreSQL, MySQL)", level: 80 }
+    ],
+    aiAndData: [
+      "Anomali Tespiti (Isolation Forest, MAD, 3-Sigma Threshold, DBSCAN)",
+      "EDA (Keşifsel Veri Analizi & Pandas/Matplotlib Görselleştirme)",
+      "Yapay Zekâ & Görüntü İşleme (MNIST Digit Recognition)",
+      "Veri Haberleşmesi & 5 Seçimli Hata Algoritması (PARITY, 2DPARITY, CRC, HAMMING, CHECKSUM)",
+      "Speech-to-Text (STT) Veri Etiketleme & WER Analizi",
+      "RAG (Retrieval-Augmented Generation) Testleri"
+    ],
+    webAndTools: [
+      "React.js & JavaScript (ES6+)",
+      "HTML5 / CSS3 & Tailwind CSS",
+      "C ile Veri Yapıları (LinkedList, BST, Sorting)",
+      "Git & GitHub Versiyon Kontrolü",
+      "Gömülü Sistem Temelleri (Embedded Systems)"
+    ]
+  }
+};
+
+  </script>
+
+  <!-- Embedded JS App Controller -->
+  <script>
+// Nisa Naz Konak Portfolio Application Controller
+document.addEventListener('DOMContentLoaded', () => {
+  initTypingEffect();
+  renderHeroStats();
+  renderProjectSchemas();
+  initInternshipsTab();
+  renderProjects();
+  renderSkills();
+  initNavigation();
+});
+
+/* ==================== TYPING EFFECT ==================== */
+function initTypingEffect() {
+  const typingElement = document.getElementById('typing-text');
+  if (!typingElement) return;
+
+  const titles = [
+    "Bilgisayar Mühendisliği Öğrencisi",
+    "Anomali Tespiti & Veri Bilimi (Yıldız Tech)",
+    "Yapay Zekâ & Prompt Mühendisi (Global Bilgi)",
+    "Görüntü İşleme & Makine Öğrenmesi",
+    "C ile Veri Yapıları",
+    "Java ile Nesne Yönelimli Programlama",
+  ];
+  
+  let titleIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function type() {
+    const currentTitle = titles[titleIndex];
+    
+    if (isDeleting) {
+      typingElement.textContent = currentTitle.substring(0, charIndex - 1);
+      charIndex--;
+    } else {
+      typingElement.textContent = currentTitle.substring(0, charIndex + 1);
+      charIndex++;
+    }
+
+    let typeSpeed = isDeleting ? 40 : 80;
+
+    if (!isDeleting && charIndex === currentTitle.length) {
+      typeSpeed = 2000;
+      isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      titleIndex = (titleIndex + 1) % titles.length;
+      typeSpeed = 400;
+    }
+
+    setTimeout(type, typeSpeed);
+  }
+
+  type();
+}
+
+/* ==================== HERO STATS ==================== */
+function renderHeroStats() {
+  const statsContainer = document.getElementById('hero-stats');
+  if (!statsContainer) return;
+
+  const stats = PORTFOLIO_DATA.personalInfo.stats;
+  
+  statsContainer.innerHTML = `
+    <div class="p-4 rounded-xl glass-card text-center border border-indigo-500/20">
+      <div class="text-3xl font-extrabold text-indigo-400 font-mono">${stats.githubRepos}</div>
+      <div class="text-xs text-slate-400 mt-1">GitHub Deposu</div>
+    </div>
+    <div class="p-4 rounded-xl glass-card text-center border border-purple-500/20">
+      <div class="text-3xl font-extrabold text-purple-400 font-mono">${stats.pythonProjects}</div>
+      <div class="text-xs text-slate-400 mt-1">Python Projesi</div>
+    </div>
+    <div class="p-4 rounded-xl glass-card text-center border border-emerald-500/20">
+      <div class="text-3xl font-extrabold text-emerald-400 font-mono">${stats.cProjects}</div>
+      <div class="text-xs text-slate-400 mt-1">C Projesi</div>
+    </div>
+    <div class="p-4 rounded-xl glass-card text-center border border-blue-500/20">
+      <div class="text-3xl font-extrabold text-blue-400 font-mono">2</div>
+      <div class="text-xs text-slate-400 mt-1">Tamamlanan Staj</div>
+    </div>
+  `;
+}
+
+/* ==================== PROJECT ARCHITECTURE SCHEMAS ==================== */
+function renderProjectSchemas() {
+  const container = document.getElementById('project-schemas-container');
+  if (!container) return;
+
+  const schemas = PORTFOLIO_DATA.projectSchemas;
+
+  container.innerHTML = schemas.map((schema) => `
+    <div class="p-6 sm:p-8 rounded-3xl glass-panel border border-slate-800 shadow-2xl relative space-y-6">
+      
+      <!-- Header -->
+      <div class="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-slate-800">
+        <div>
+          <span class="px-3 py-1 text-[11px] font-semibold rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
+            ${schema.category}
+          </span>
+          <h3 class="text-xl font-bold text-slate-100 mt-2">${schema.title}</h3>
+          <p class="text-xs text-slate-400 mt-1 leading-relaxed max-w-3xl">${schema.description}</p>
+        </div>
+
+        ${schema.githubUrl.startsWith('http') ? `
+          <a href="${schema.githubUrl}" target="_blank" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-semibold text-slate-200 transition-all flex items-center gap-2">
+            <i data-lucide="github" class="w-4 h-4"></i>
+            <span>GitHub İncele</span>
+          </a>
+        ` : ''}
+      </div>
+
+      <!-- Steps Pipeline Visual Flowchart -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 relative">
+        ${schema.steps.map((step, idx) => `
+          <div class="p-5 rounded-2xl glass-card border ${step.color} relative flex flex-col justify-between group hover:scale-[1.02] transition-transform">
+            
+            <div class="flex items-center justify-between mb-3">
+              <span class="w-7 h-7 rounded-lg bg-slate-900/80 text-xs font-bold font-mono flex items-center justify-center border border-slate-700">
+                0${idx + 1}
+              </span>
+              <i data-lucide="${step.icon}" class="w-5 h-5 opacity-80"></i>
+            </div>
+
+            <div>
+              <h5 class="text-sm font-bold text-slate-100">${step.label}</h5>
+              <div class="text-xs text-slate-400 mt-1 font-mono leading-relaxed">${step.sub}</div>
+            </div>
+
+            ${idx < schema.steps.length - 1 ? `
+              <div class="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 z-10 w-6 h-6 rounded-full bg-slate-900 border border-slate-700 text-slate-400 flex items-center justify-center">
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </div>
+            ` : ''}
+          </div>
+        `).join('')}
+      </div>
+
+      <!-- Technical Details Bullet Points -->
+      <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800/80 space-y-3">
+        <h5 class="text-xs font-bold text-slate-300 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+          <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i> Teknik Detaylar & Yöntemler:
+        </h5>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs text-slate-300">
+          ${schema.details.map(detail => `
+            <div class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-950/60 border border-slate-800">
+              <span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span>
+              <span>${detail}</span>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+
+    </div>
+  `).join('');
+
+  lucide.createIcons();
+}
+
+/* ==================== INTERNSHIPS (STAJ 1 & STAJ 2) ==================== */
+let activeInternshipId = "staj2"; // Default to 2026
+
+function initInternshipsTab() {
+  const tabsContainer = document.getElementById('internship-tabs');
+  if (!tabsContainer) return;
+
+  const internships = PORTFOLIO_DATA.internships;
+
+  tabsContainer.innerHTML = internships.map(item => `
+    <button class="internship-tab-btn px-5 py-2.5 rounded-xl text-xs font-bold transition-all ${item.id === activeInternshipId ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-600/30' : 'bg-slate-800 text-slate-300 hover:bg-slate-700'}" data-id="${item.id}">
+      🏢 ${item.company} (${item.year} - ${item.type.split(' ')[0]} ${item.type.split(' ')[1]})
+    </button>
+  `).join('');
+
+  tabsContainer.addEventListener('click', (e) => {
+    const btn = e.target.closest('.internship-tab-btn');
+    if (!btn) return;
+
+    activeInternshipId = btn.dataset.id;
+    document.querySelectorAll('.internship-tab-btn').forEach(b => {
+      const isActive = b.dataset.id === activeInternshipId;
+      b.className = `internship-tab-btn px-5 py-2.5 rounded-xl text-xs font-bold transition-all ${isActive ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-600/30' : 'bg-slate-800 text-slate-300 hover:bg-slate-700'}`;
+    });
+
+    renderActiveInternshipTimeline();
+  });
+
+  renderActiveInternshipTimeline();
+}
+
+function renderActiveInternshipTimeline() {
+  const timelineContainer = document.getElementById('internship-timeline');
+  const metaContainer = document.getElementById('internship-meta-header');
+  if (!timelineContainer) return;
+
+  const currentInternship = PORTFOLIO_DATA.internships.find(item => item.id === activeInternshipId) || PORTFOLIO_DATA.internships[0];
+
+  if (metaContainer) {
+    metaContainer.innerHTML = `
+      <div class="p-6 rounded-2xl glass-card border border-indigo-500/30 mb-8 space-y-2">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <h3 class="text-xl font-bold text-slate-100">${currentInternship.company} — ${currentInternship.type}</h3>
+          <span class="px-3 py-1 text-xs font-mono rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">${currentInternship.period}</span>
+        </div>
+        <p class="text-xs text-indigo-300 font-semibold">${currentInternship.field}</p>
+        ${currentInternship.vision ? `<p class="text-xs text-slate-400 italic">" ${currentInternship.vision} "</p>` : ''}
+      </div>
+    `;
+  }
+
+  const logs = currentInternship.weeklyLogs;
+
+  timelineContainer.innerHTML = logs.map((log) => `
+    <div class="relative pl-8 md:pl-10 pb-10 last:pb-0 group">
+      <div class="absolute left-3 top-3 bottom-0 w-0.5 bg-indigo-500/30 group-last:hidden"></div>
+      
+      <div class="absolute left-0 top-1.5 w-6 h-6 rounded-full bg-slate-900 border-2 border-indigo-500 flex items-center justify-center group-hover:scale-125 transition-transform">
+        <div class="w-2 h-2 rounded-full bg-indigo-400"></div>
+      </div>
+      
+      <div class="p-6 rounded-2xl glass-card relative overflow-hidden border border-slate-700/50">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+          <span class="px-3 py-1 text-xs font-semibold rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
+            ${log.week}
+          </span>
+        </div>
+        
+        <h4 class="text-lg font-bold text-slate-100 mb-2">${log.title}</h4>
+        <p class="text-sm text-slate-300 mb-4 leading-relaxed">${log.summary}</p>
+        
+        <div class="space-y-2 pt-3 border-t border-slate-700/40">
+          ${log.details.map(detail => `
+            <div class="flex items-start gap-2 text-xs text-slate-400">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 mt-0.5 shrink-0"></i>
+              <span>${detail}</span>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    </div>
+  `).join('');
+
+  lucide.createIcons();
+}
+
+/* ==================== PROJECTS ==================== */
+let currentProjectCategory = "TÜMÜ";
+let currentSearchQuery = "";
+
+function renderProjects() {
+  const container = document.getElementById('projects-container');
+  const categoryFilters = document.getElementById('project-category-filters');
+  const searchInput = document.getElementById('project-search');
+
+  if (!container) return;
+
+  const categories = ["TÜMÜ", "Yapay Zekâ & Veri", "Web & Arayüz", "Sistem & Algoritma"];
+
+  if (categoryFilters && categoryFilters.children.length === 0) {
+    categoryFilters.innerHTML = categories.map(cat => `
+      <button class="project-cat-btn px-3.5 py-1.5 text-xs font-semibold rounded-xl transition-all ${cat === currentProjectCategory ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-600/30' : 'bg-slate-800 text-slate-300 hover:bg-slate-700'}" data-cat="${cat}">
+        ${cat}
+      </button>
+    `).join('');
+
+    categoryFilters.addEventListener('click', (e) => {
+      const btn = e.target.closest('.project-cat-btn');
+      if (!btn) return;
+      currentProjectCategory = btn.dataset.cat;
+      
+      document.querySelectorAll('.project-cat-btn').forEach(b => {
+        b.className = `project-cat-btn px-3.5 py-1.5 text-xs font-semibold rounded-xl transition-all ${b.dataset.cat === currentProjectCategory ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-600/30' : 'bg-slate-800 text-slate-300 hover:bg-slate-700'}`;
+      });
+      
+      updateProjectsGrid();
+    });
+  }
+
+  if (searchInput && !searchInput.dataset.hasListener) {
+    searchInput.dataset.hasListener = "true";
+    searchInput.addEventListener('input', (e) => {
+      currentSearchQuery = e.target.value.toLowerCase();
+      updateProjectsGrid();
+    });
+  }
+
+  updateProjectsGrid();
+}
+
+function updateProjectsGrid() {
+  const container = document.getElementById('projects-container');
+  if (!container) return;
+
+  const projects = PORTFOLIO_DATA.projects;
+  const filtered = projects.filter(p => {
+    const matchesCat = currentProjectCategory === "TÜMÜ" || p.category === currentProjectCategory;
+    const matchesSearch = p.title.toLowerCase().includes(currentSearchQuery) || 
+                          p.description.toLowerCase().includes(currentSearchQuery) ||
+                          p.highlights.some(h => h.toLowerCase().includes(currentSearchQuery));
+    return matchesCat && matchesSearch;
+  });
+
+  if (filtered.length === 0) {
+    container.innerHTML = `
+      <div class="col-span-full text-center py-12 text-slate-400 text-sm">
+        Aradığınız kriterlere uygun proje bulunamadı.
+      </div>
+    `;
+    return;
+  }
+
+  container.innerHTML = filtered.map(p => `
+    <div class="p-6 rounded-2xl glass-card border border-slate-700/60 flex flex-col justify-between group">
+      <div>
+        <div class="flex items-center justify-between gap-2 mb-3">
+          <span class="px-2.5 py-1 text-[11px] font-semibold font-mono rounded-full border ${p.langBadge}">
+            ${p.language}
+          </span>
+          <a href="${p.githubUrl}" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-indigo-400 transition-colors">
+            <i data-lucide="github" class="w-5 h-5"></i>
+          </a>
+        </div>
+
+        <h4 class="text-lg font-bold text-slate-100 mb-2 group-hover:text-indigo-300 transition-colors">
+          ${p.title}
+        </h4>
+        <p class="text-xs text-slate-300 leading-relaxed mb-4">
+          ${p.description}
+        </p>
+      </div>
+
+      <div>
+        <div class="flex flex-wrap gap-1.5 mb-4">
+          ${p.highlights.map(h => `
+            <span class="px-2 py-0.5 text-[10px] rounded bg-slate-800 text-slate-400 font-mono">
+              #${h}
+            </span>
+          `).join('')}
+        </div>
+
+        <a href="${p.githubUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-400 hover:text-indigo-300">
+          <span>GitHub Deposunu İncele</span>
+          <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </div>
+  `).join('');
+
+  lucide.createIcons();
+}
+
+/* ==================== SKILLS ==================== */
+function renderSkills() {
+  const container = document.getElementById('skills-container');
+  if (!container) return;
+
+  const skills = PORTFOLIO_DATA.skills;
+
+  container.innerHTML = `
+    <!-- Programming Languages -->
+    <div class="p-6 rounded-2xl glass-card border border-slate-700/60">
+      <h4 class="text-base font-bold text-slate-100 mb-4 flex items-center gap-2">
+        <i data-lucide="code-2" class="w-5 h-5 text-indigo-400"></i> Programlama Dilleri
+      </h4>
+      <div class="space-y-4">
+        ${skills.languages.map(lang => `
+          <div>
+            <div class="flex justify-between text-xs mb-1.5 font-medium">
+              <span class="text-slate-200">${lang.name}</span>
+              <span class="text-indigo-400 font-mono">%${lang.level}</span>
+            </div>
+            <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full transition-all duration-1000" style="width: ${lang.level}%"></div>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+
+    <!-- AI & Data Science -->
+    <div class="p-6 rounded-2xl glass-card border border-slate-700/60">
+      <h4 class="text-base font-bold text-slate-100 mb-4 flex items-center gap-2">
+        <i data-lucide="brain" class="w-5 h-5 text-purple-400"></i> Yapay Zekâ & Veri Mühendisliği
+      </h4>
+      <ul class="space-y-2.5 text-xs text-slate-300">
+        ${skills.aiAndData.map(item => `
+          <li class="flex items-start gap-2 p-2.5 rounded-xl bg-slate-900/50 border border-slate-800">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-purple-400 mt-0.5 shrink-0"></i>
+            <span>${item}</span>
+          </li>
+        `).join('')}
+      </ul>
+    </div>
+
+    <!-- Web & Software Engineering -->
+    <div class="p-6 rounded-2xl glass-card border border-slate-700/60">
+      <h4 class="text-base font-bold text-slate-100 mb-4 flex items-center gap-2">
+        <i data-lucide="layers" class="w-5 h-5 text-emerald-400"></i> Web, Arayüz & Araçlar
+      </h4>
+      <ul class="space-y-2.5 text-xs text-slate-300">
+        ${skills.webAndTools.map(item => `
+          <li class="flex items-start gap-2 p-2.5 rounded-xl bg-slate-900/50 border border-slate-800">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 mt-0.5 shrink-0"></i>
+            <span>${item}</span>
+          </li>
+        `).join('')}
+      </ul>
+    </div>
+  `;
+
+  lucide.createIcons();
+}
+
+/* ==================== NAVIGATION ==================== */
+function initNavigation() {
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+}
+
+  </script>
+</body>
+</html>
