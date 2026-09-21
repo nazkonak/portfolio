@@ -796,12 +796,12 @@ const PORTFOLIO_DATA = {
 
   skills: {
     languages: [
-      { name: "Python", level: 90 },
-      { name: "C / C++", level: 85 },
-      { name: "JavaScript / TypeScript", level: 85 },
-      { name: "C#", level: 75 },
-      { name: "Java", level: 70 },
-      { name: "SQL (PostgreSQL, MySQL)", level: 80 }
+      { name: "Python", levelText: "İleri Seviye", level: 90},
+      { name: "C / C++", levelText: "Orta Seviye", level: 50 },
+      { name: "JavaScript / TypeScript", levelText: "Orta Seviye", level: 50 },
+      { name: "C#", levelText: "Orta Seviye", level: 50 },
+      { name: "Java", levelText: "Orta Seviye", level: 50 },
+      { name: "SQL (PostgreSQL, MySQL)", levelText: "İleri Seviye", level: 90 }
     ],
     aiAndData: [
       "Teknofest ROV Otonom Kontrol & PID Mekanizması",
@@ -1219,7 +1219,7 @@ function renderSkills() {
               <span class="text-indigo-400 font-mono">%${lang.level}</span>
             </div>
             <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
-              <div class="h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full transition-all duration-1000" style="width: ${lang.level}%"></div>
+              <div class="h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full transition-all duration-1000" style="width: ${ lang.level}%"></div>
             </div>
           </div>
         `).join('')}
