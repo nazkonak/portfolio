@@ -230,7 +230,7 @@ code, pre, .font-mono {
       <div class="flex items-center gap-3">
         <!-- GitHub Profile -->
         <a href="https://github.com/nazkonak" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold shadow-lg shadow-indigo-600/20 transition-all">
-          <i data-lucide="github" class="w-4 h-4"></i>
+          <img src="./github.png" alt="GitHub" class="w-4 h-4">
           <span>GitHub Profilim</span>
         </a>
 
@@ -276,7 +276,7 @@ code, pre, .font-mono {
           </div>
 
           <p class="text-xs sm:text-base text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-            Karabük Üniversitesi Bilgisayar Mühendisliği 3. sınıf öğrencisiyim. Yıldız Tech'te Anomali Tespiti (Isolation Forest, MAD, 3-Sigma); Global Bilgi'de Yapay Zekâ Ajanları ve Teknofest İnsansız Su Altı Sistemleri üzerine otonom kontrol projeleri geliştirdim.
+            Karabük Üniversitesi Bilgisayar Mühendisliği 4. sınıf öğrencisiyim. Yıldız Tech'te Anomali Tespiti (Isolation Forest, MAD, 3-Sigma); Global Bilgi'de Yapay Zekâ Ajanları ve Teknofest İnsansız Su Altı Sistemleri üzerine otonom kontrol simülasyon projeleri geliştirdim.
           </p>
 
           <!-- Buttons -->
@@ -733,18 +733,6 @@ const PORTFOLIO_DATA = {
 
   projects: [
     {
-      id: "teknofestrov",
-      title: "Teknofest Otonom Su Altı (ROV)",
-      language: "Python / OpenCV",
-      langBadge: "bg-cyan-600/20 text-cyan-400 border-cyan-500/30",
-      description: "Teknofest İnsansız Su Altı Sistemleri yarışması kapsamında geliştirilen; OpenCV görüntü işleme, PID kontrol mekanizması ve IMU sensör verileriyle otonom manevra yapan ROV yazılımı.",
-      githubUrl: "https://github.com/nazkonak",
-      stars: 0,
-      forks: 0,
-      category: "Robotik & Otonom",
-      highlights: ["Python", "OpenCV", "PID Control", "Autonomous ROV"]
-    },
-    {
       id: "datacommunication",
       title: "DataCommunication",
       language: "Python",
@@ -943,7 +931,7 @@ function renderProjectSchemas() {
 
         ${schema.githubUrl.startsWith('http') ? `
           <a href="${schema.githubUrl}" target="_blank" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-semibold text-slate-200 transition-all flex items-center gap-2">
-            <i data-lucide="github" class="w-4 h-4"></i>
+            <img src="./github.png" alt="GitHub" class="w-4 h-4">
             <span>GitHub İncele</span>
           </a>
         ` : ''}
